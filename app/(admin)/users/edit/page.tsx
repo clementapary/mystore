@@ -16,7 +16,7 @@ export default async function EditUserPage({ params }: Props) {
   });
 
   return (
-    <div className="p-6">
+    <section className="p-6">
       <div className="overflow-x-auto rounded-2xl bg-white p-6 shadow-sm">
         <h1 className="mb-4 text-lg font-semibold">Edit User #{slug}</h1>
 
@@ -50,6 +50,6 @@ export default async function EditUserPage({ params }: Props) {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import React from "react";
+import Link from "next/link";
 
 export default async function UserDetailsPage({
   params,
@@ -17,10 +17,14 @@ export default async function UserDetailsPage({
       <div className="p-6">
         <section className="overflow-x-auto rounded-2xl bg-white p-6 shadow-sm">
           <h3 className="mb-4 text-lg font-semibold">User Details</h3>
+
           <div className="space-y-4">
             <p>Name: {user?.name}</p>
             <p>Email: {user?.email}</p>
             <p>Status: active</p>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium">
+              <Link href={`/users/${user?.id}/edit`}>Edit</Link>
+            </span>
           </div>
         </section>
       </div>
